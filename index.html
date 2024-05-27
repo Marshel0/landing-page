@@ -70,23 +70,23 @@
                 </div>
             </article>
             
-            <form action = "" method = "POST">
-                <input type="hidden" name="_next" value="">
-                <input type="hidden" name="_captcha" value="false">
-        
+            <form>
                 <label for="nome">Nome: </label>
-                <input id="nome" type="text" name="name" placeholder="Digite seu nome" required>
-        
+                <input onkeyup="validarNome()" id="nome" type="text" name="name" placeholder="Digite seu nome" required>
+                <div id="txtNome"></div>
+
                 <label for="email">Email: </label>
-                <input id="email" type="email" name="email" placeholder="Digite seu email" required>
-        
+                <input onkeyup="validarEmail()" id="email" type="email" name="email" placeholder="Digite seu email" required>
+                <div id="txtEmail"></div>
+
                 <label for="subject">Assunto: </label>
                 <input id="subject" type="text" name="subject" placeholder="Digite o título da mensagem" required>
-        
+
                 <label for="message">Mensagem: </label>
-                <textarea id="message" name="message" placeholder="Digite sua mensagem" required></textarea>
-        
-                <button class="btn" type="submit">Enviar</button>
+                <textarea onkeyup="validarMessage()" id="message" name="message" placeholder="Digite sua mensagem" required></textarea>
+                <div id="txtMensagem"></div>
+
+                <button onclick="enviarForm()" class="btn" type="submit">Enviar</button> <!-- Adicione aqui as CLASSES -->
             </form>
 
         </section>
